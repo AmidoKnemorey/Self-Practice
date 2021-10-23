@@ -12,6 +12,7 @@ public class BMI {
         System.out.println("insert height as santimeters");
         int height = mainScanner.nextInt();
 
+
         whatTheBMI(weight, height);
     }
 
