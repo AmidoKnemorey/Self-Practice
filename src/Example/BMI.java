@@ -21,8 +21,9 @@ public class BMI {
 
     public static void whatTheBMI (float weight, int height) {
         float temporaryHeight1 = (float) height;
-        float temporaryHeight = temporaryHeight1 / 100;
-        float yourBMI = weight / temporaryHeight;
+        float temporaryHeight = (temporaryHeight1 / 100);
+        temporaryHeight = temporaryHeight * temporaryHeight;
+        float yourBMI = weight / (temporaryHeight * temporaryHeight);
         System.out.println(yourBMI);
         //return;
     }

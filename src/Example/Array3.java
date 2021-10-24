@@ -12,7 +12,6 @@ public class Array3 {
 
             static int[] addToArray(int[] input, int newInt){
 
-
                 int inputArrayLength = input.length;
                 int[] newArray = new int[inputArrayLength + 1];
 

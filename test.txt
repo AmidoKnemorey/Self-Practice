@@ -1,0 +1,21 @@
+0,85249351,57912,2019-09-15 11:10:11,2020-01-10 08:43:21,Waniliowa / Cynamonowa,Waniliowa / Cynamonowa
+1,85460498,650575,2019-09-17 15:39:55,2020-01-15 08:02:42,Poza stacją,Poza stacją
+2,85628010,57840,2019-09-19 17:00:34,2020-01-09 14:24:26,Powstańców Śląskich (Arkady Wrocławskie),.RELOKACYJNA A1-4
+3,86207349,650665,2019-09-26 15:08:51,2020-01-20 14:52:24,Zaporoska / Gajowicka,Zaporoska / Gajowicka
+4,86671911,57376,2019-10-02 17:47:29,2020-01-22 11:42:52,Szewska / Kazimierza Wielkiego ,Szewska / Kazimierza Wielkiego 
+5,86766537,57396,2019-10-04 07:28:45,2020-01-09 20:21:04,al. Kochanowskiego / Kopernika,al. Kochanowskiego / Kopernika
+6,87239904,57657,2019-10-11 13:21:02,2020-01-11 20:03:18,Plac Uniwersytecki (UWr),Poza stacją
+7,87724116,650065,2019-10-16 17:56:04,2020-01-10 08:44:42,Gliniana / Gajowa,Gliniana / Gajowa
+8,88104753,57988,2019-10-21 10:17:04,2020-01-10 08:45:27,Powstańcow Śląskich / Aleja Hallera,Powstańcow Śląskich / Aleja Hallera
+9,88739891,57860,2019-10-28 18:08:31,2020-01-08 11:57:23,Strzegomska / Estońska,.RELOKACYJNA A1-4
+10,89132308,650018,2019-11-05 07:13:41,2020-01-10 09:00:11,Zwycięska / Ołtaszyńska,Zwycięska / Ołtaszyńska
+11,89785462,650708,2019-11-17 14:11:14,2020-01-15 09:35:37,Norwida / Wyspiańskiego (PWr),Norwida / Wyspiańskiego (PWr)
+12,90133577,57709,2019-11-24 12:03:03,2020-01-10 13:30:10,Dworzec Główny ,Dworzec Główny 
+13,90456154,57662,2019-11-30 16:29:53,2020-01-28 09:42:05,Marca Polo (Olimpia Port),Marca Polo (Olimpia Port)
+14,90567519,57010,2019-12-04 08:09:22,2020-01-10 10:43:46,Traugutta / Pułaskiego,Traugutta / Pułaskiego
+15,90768378,650585,2019-12-10 14:47:10,2020-01-02 08:08:34,Jedności Narodowej / Wyszyńskiego,Jedności Narodowej / Wyszyńskiego
+16,90774176,650002,2019-12-10 16:52:28,2020-01-08 15:00:50,Wita Stwosza / Szewska,Poza stacją
+17,90903480,57370,2019-12-14 22:23:18,2020-01-10 10:46:25,Aleja Hallera / Mielecka,Aleja Hallera / Mielecka
+18,91050536,57395,2019-12-19 11:21:41,2020-01-08 11:39:04,Wyszyńskiego / Szczytnicka,Poza stacją
+19,91124629,57084,2019-12-21 15:25:04,2020-01-10 13:32:59,Krzycka / Aleja Karkonoska (Park Południowy),Krzycka / Aleja Karkonoska (Park Południowy)
+20,91125886,650091,2019-12-21 16:16:27,2020-01-10 13:32:45,Krzycka / Aleja Karkonoska (Park Południowy),Krzycka / Aleja Karkonoska (Park Południowy)
