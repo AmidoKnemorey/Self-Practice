@@ -2,8 +2,8 @@ package ATM;
 
 public class Bankomat {
 
-    private double totalAmount;     // money
-    private Client[] clients;       // array with clients
+    private final double totalAmount;     // money
+    private final Client[] clients;       // array with clients
 
     public Bankomat(double totalAmount, Client[] clients) {
         this.totalAmount = totalAmount;
@@ -16,11 +16,12 @@ public class Bankomat {
     }
 
     public Client putCard(String accountNumber) {
-        for (int i = 0; i < this.clients.length; i++) {
-            if (clients[i].getAccountNumber().equals(accountNumber)) {
-                return clients[i];
+        for (Client client : this.clients) {
+            if (client.getAccountNumber().equals(accountNumber)) {
+                return client;
             }
-        }  return null;
+        }
+        return null;
         //MandatoryExercise4 ti wsjazówka
         //this.client <- tablica do przeszukania
         //Sposród wszystkich klientów wybierz tego, który ma taki numer konta jak `accountNumber` z parametru.

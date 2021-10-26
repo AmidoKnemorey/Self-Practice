@@ -14,6 +14,7 @@ public class BMI {
 
 
         whatTheBMI(weight, height);
+
     }
 
 
@@ -27,8 +28,4 @@ public class BMI {
         System.out.println(yourBMI);
         //return;
     }
-
-
-
-
 }

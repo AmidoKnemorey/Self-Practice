@@ -2,7 +2,7 @@ package ATM;
 
 public class Client {
 
-    private static int idCounter = 0; //not fully understand what's happening here
+    private static int idCounter = 0;
 
     private int idOfClient = 0;
     private final String ownerName;
@@ -15,8 +15,7 @@ public class Client {
         this.accountNumber = accountNumber;
         this.pinNumber = pinNumber;
         this.accountState = accountState;
-        this.idOfClient = ++idCounter; //not fully understand what's happening here
-        //idCounter++; //not fully understand what's happening here
+        this.idOfClient = ++idCounter;
     }
 
 
