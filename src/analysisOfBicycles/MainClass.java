@@ -8,6 +8,14 @@ import java.util.*;
 
 public class MainClass {
 
+//  this simple program from my Home tasks
+//  reads all lines from the file and processes them
+//  to compute some average values. For example average lease duration
+//  or to compute most often used bicycles. All you need just run it.
+//  In "mostOftenUsedBicycle" method are two ways to compute most often used bicycles and
+//  i did it first time and all this program is one of my first codes in Java.
+//  I'm newbee 31.10.2021. Someday I'll expand this study program if I have no other tasks :P
+
     public static void main(String[] args) throws IOException {
 
         CalculatingBoy Bobby = new CalculatingBoy(); // Bobby helps us to calculate different average values

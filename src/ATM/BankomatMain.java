@@ -5,22 +5,29 @@ import java.util.Scanner;
 
 public class BankomatMain {
 
+//  this simple program from my Home tasks
+//  just simulates real ATM. Just run it and use information of
+//  cliets bellow, in console after running the program.
+//  I did it first time and all this program is one of my first codes in Java.
+//  Someday I'll expand this study program if I have no other tasks :P
+//  I'm newbee 31.10.2021. I left my own comments on Polish and Russian language in code.
+
     public static void main(String[] args) {
         Scanner ScannerString = new Scanner(System.in);
         Scanner ScannerInt = new Scanner(System.in);
-
+        // bellow: name/cardnumber/pin/moneyOfClient
         Client client1 = new Client("John Smith","123", "4353", 129);
         Client client2 = new Client("Janush Kaminski","124", "4354", 500);
         Client client3 = new Client("Wilhelm Schneider","125", "4355", 800);
         Client client4 = new Client("Vladimir Gromov","127","4444",2150);
 
-        Client[] allClients = {client1, client2, client3, client4}; // Array of customers;
+        Client[] allClients = {client1, client2, client3, client4}; // массив клиентов;
 
-        Bankomat HardMoney = new Bankomat(1000, allClients); // Created a new bank;
+        Bankomat HardMoney = new Bankomat(1000, allClients); // создал банк;
 
         System.out.println("Welcome, please insert your card.");
 
-                                                //Krok 1. Ustalenie użytkownika
+                                                //Ustalenie użytkownika
         String userInput = ScannerString.nextLine();
         Client CurrentClient = HardMoney.putCard(userInput);
         if (CurrentClient == null) {
@@ -29,7 +36,7 @@ public class BankomatMain {
         } else { System.out.println("Good to see you the owner of card #"+CurrentClient);
                  System.out.println("Your index is "+CurrentClient.getIdOfClient()+"."); }
 
-                                                //Krok 2. Autoryzajca PINem
+                                                //Autoryzajca PINem
         System.out.println("Please insert password of your card.");
         String Password = ScannerString.nextLine();
         boolean isPinCorrect = HardMoney.isPinCorrect(CurrentClient,Password);
@@ -44,14 +51,14 @@ public class BankomatMain {
 
         System.out.println("You have "+CurrentClient.getAccountState()+" dollars in your account.");
 
-        for ( ; ; ) {
+        do {
             System.out.println(HardMoney.actionList());
             switch (ScannerInt.nextByte()) {
                 case 1:
                     System.out.println("How many dollars to withdrawal?");
                     double temporary = ScannerInt.nextDouble();
                     double temporaryAccountState = CurrentClient.getAccountState();
-                    double atmTotalAmount = HardMoney.getTotalAmount(); //остановился на выячислении оставшихся
+                    double atmTotalAmount = HardMoney.getTotalAmount(); //остановился на вычислении оставшихся
                     temporary = temporaryAccountState - temporary;      //средств в банкомате
                     atmTotalAmount = atmTotalAmount - temporary;
                         if (temporary >= 0 && atmTotalAmount >= 0) {
@@ -90,6 +97,6 @@ public class BankomatMain {
                     }
                 default:
             }
-        }
+        } while (true);
     }
 }

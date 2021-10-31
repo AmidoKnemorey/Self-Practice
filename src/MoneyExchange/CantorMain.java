@@ -2,7 +2,7 @@ package MoneyExchange;
 import java.math.BigDecimal;
 
 public class CantorMain {
-
+// in procces of developing
     public static void main(String[] args) {
 
         CashStorage cashStorageMain = new CashStorage(new BigDecimal("3000.0"),new BigDecimal("4000.0"),new BigDecimal("5000.0"));

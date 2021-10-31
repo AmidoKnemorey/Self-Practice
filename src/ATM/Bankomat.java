@@ -25,7 +25,7 @@ public class Bankomat {
         //MandatoryExercise4 ti wsjazówka
         //this.client <- tablica do przeszukania
         //Sposród wszystkich klientów wybierz tego, który ma taki numer konta jak `accountNumber` z parametru.
-    } //поиск клиента
+    }   //поиск клиента
 
     public boolean isPinCorrect(Client client, String userPinInput) { //client // password
             if (client.getPinNumber().equals(userPinInput)) {

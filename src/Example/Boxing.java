@@ -3,22 +3,29 @@ package Example;
 import static java.lang.System.out;
 
 public class Boxing {
-    public static void main (String[] args) {
-        int Salary = 7_000;
-        Integer Salary2 = Integer.valueOf(Salary);
-        Integer j = Salary2;
-        short Flat = 72;
-        Short Flat2 = Short.valueOf(Flat);
-        byte Vacation = (byte) 175;
-        Byte Vacation2 = Byte.valueOf(Vacation);
-        short Vac = (short) Vacation;
-        Short Vac2 = Short.valueOf(Vac);
-        String Wides = "123";
-        int Salary3 = Integer.parseInt(Wides);
 
-        out.println("Your salary is "+Salary+".");
-        out.println("You have "+Vac+" days of vacation.");
-        out.println("Wides of your flat are "+Wides+".");
-        out.println(Salary3);
+    //Here I first got meet with type conversion.
+
+    public static void main (String[] args) {
+        int value = 7_000; // -2147483648 / 2147483647
+        Integer valueAfterConversion = Integer.valueOf(value);
+
+        short value2 = 72; // -32768 / 32767
+        Short value2AfterConversion = Short.valueOf(value2);
+
+        byte value3 = (byte) 127; // -128 / 127
+        Byte value3AfterConversion = Byte.valueOf(value3);
+
+        short value4 = (short) 170; // -32768 / 32767
+        Short value4AfterConversion = Short.valueOf(value4);
+
+        String value5 = "123"; // only symbols
+        int value5AfterConversion = Integer.parseInt(value5);
+
+        out.println(valueAfterConversion);
+        out.println(value2AfterConversion);
+        out.println(value3AfterConversion);
+        out.println(value4AfterConversion);
+        out.println(value5AfterConversion);
     }
 }
