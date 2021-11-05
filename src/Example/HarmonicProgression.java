@@ -10,7 +10,7 @@ public class HarmonicProgression {
         long resultNominator = 1;
         long resultDenominator = 1;
         System.out.println(resultNominator+"/"+resultDenominator);
-        for (int i = 1; i <= denominator; i++) {
+        for (int i = 2; i <= denominator; i++) {
             long temporaryNom1 = resultNominator * (leastCommonMultiple(resultDenominator, i) / resultDenominator);
             long temporaryNom2 = nominator * (leastCommonMultiple(resultDenominator, i) / i);
             resultNominator = temporaryNom1 + temporaryNom2;
