@@ -8,7 +8,6 @@ public class SimpleCalculator {
     // I did it as I could, I'll improve this program later most likely.
     // Also, I had many problems with this task, and I spent a lot of time here,
     // so I can't look at it anymore, temporarily.
-    // P.S. Use dot between non-integers.
 
     public static void main(String[] args) {
         double firstNumber = getNumber();
@@ -24,6 +23,7 @@ public class SimpleCalculator {
         double outFromMethod = 0;
         if (theOnlyOne.hasNextLine()) {
             temporary = theOnlyOne.nextLine();
+            temporary = temporary.replace(",", ".");
             outFromMethod = Double.parseDouble(temporary);
         } else {
             System.out.println("Wrong entering.");
