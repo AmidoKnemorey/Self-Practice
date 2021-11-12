@@ -1,9 +1,8 @@
 package ATM;
-import Example.Cycles;
 
 import java.util.Scanner;
 
-public class BankomatMain {
+public class CashDispenserMain {
 
 //  this simple program from my Home tasks
 //  just simulates real ATM. Just run it and use information of
@@ -23,7 +22,7 @@ public class BankomatMain {
 
         Client[] allClients = {client1, client2, client3, client4}; // массив клиентов;
 
-        Bankomat HardMoney = new Bankomat(1000, allClients); // создал банк;
+        CashDispenser HardMoney = new CashDispenser(1000, allClients); // создал банк;
 
         System.out.println("Welcome, please insert your card.");
 

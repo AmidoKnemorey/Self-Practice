@@ -1,4 +1,4 @@
-package analysisOfBicycles;
+package BicyclesRentalAnalysis;
 
 import java.time.Duration;
 import java.util.*;

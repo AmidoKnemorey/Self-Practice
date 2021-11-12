@@ -1,11 +1,11 @@
 package ATM;
 
-public class Bankomat {
+public class CashDispenser {
 
     private final double totalAmount;     // money
     private final Client[] clients;       // array with clients
 
-    public Bankomat(double totalAmount, Client[] clients) {
+    public CashDispenser(double totalAmount, Client[] clients) {
         this.totalAmount = totalAmount;
         this.clients = clients;
     } //конструктор банкомата

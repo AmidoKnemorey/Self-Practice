@@ -1,4 +1,4 @@
-package analysisOfBicycles;
+package BicyclesRentalAnalysis;
 
 import java.io.IOException;
 import java.io.FileReader;

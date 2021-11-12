@@ -1,9 +1,6 @@
-package analysisOfBicycles;
+package BicyclesRentalAnalysis;
 
-import org.w3c.dom.ls.LSOutput;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 
 public class TheTrip {
 
