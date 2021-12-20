@@ -2,6 +2,7 @@ package FirstMiniProjects.BicyclesRentalAnalysis;
 
 import java.time.Duration;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class CalculatingBoy {       // Period, Duration, ChronoUnit
 
@@ -21,20 +22,21 @@ public class CalculatingBoy {       // Period, Duration, ChronoUnit
             allUsedBicycles.merge(theTrip.getIdOfBicycle(), 1, Integer::sum);
         }
         Integer maxQuantityOfUsing = Collections.max(allUsedBicycles.values());
-//        Set<Integer> mostUsedBicycle = allUsedBicycles.entrySet()
-//            .stream().filter(entry -> Objects.equals(entry.getValue(), maxQuantityOfUsing))
-//            .map(Map.Entry::getKey).collect(Collectors.toSet());
-//        System.out.println("Most often used bicycle is "+mostUsedBicycle+". It was used for "+maxQuantityOfUsing+" times.");
+
+        Set<Integer> mostUsedBicycle = allUsedBicycles.entrySet()
+            .stream().filter(entry -> Objects.equals(entry.getValue(), maxQuantityOfUsing))
+            .map(Map.Entry::getKey).collect(Collectors.toSet());
+        System.out.println("Most often used bicycle is "+mostUsedBicycle+". It was used for "+maxQuantityOfUsing+" times.");
 //        getKeyByValue(allUsedBicycles,maxQuantityOfUsing);
-//        }
-
-
-        for (Map.Entry<Integer, Integer> entry : allUsedBicycles.entrySet()) {
-            if (Objects.equals(maxQuantityOfUsing, entry.getValue())) {
-                System.out.println("Most often used bicycle is " + entry.getKey() + ". It was used for " + maxQuantityOfUsing + " times.");
-            }
         }
-    }
+
+
+//        for (Map.Entry<Integer, Integer> entry : allUsedBicycles.entrySet()) {
+//            if (Objects.equals(maxQuantityOfUsing, entry.getValue())) {
+//                System.out.println("Most often used bicycle is " + entry.getKey() + ". It was used for " + maxQuantityOfUsing + " times.");
+//            }
+//        }
+//    }
 
 
 }
