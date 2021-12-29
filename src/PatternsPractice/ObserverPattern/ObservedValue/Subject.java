@@ -1,4 +1,4 @@
-package PatternsPractice.ObserverPattern;
+package PatternsPractice.ObserverPattern.ObservedValue;
 
 import java.util.HashSet;
 import java.util.Set;

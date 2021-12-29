@@ -1,4 +1,4 @@
-package PatternsPractice.ObserverPattern;
+package PatternsPractice.ObserverPattern.ObservedValue;
 
 public abstract class Observer {
 

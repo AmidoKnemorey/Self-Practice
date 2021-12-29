@@ -1,8 +1,7 @@
-package PatternsPractice.ObserverPattern;
+package PatternsPractice.ObserverPattern.ObservedValue;
 
 public class LoweredValueObserver extends Observer {
-
-
+    //Observer which get news about changed value, only if changed value becomes less than it was before
     public String getMarkerOfChannel() {
         return markerOfChannel;
     }

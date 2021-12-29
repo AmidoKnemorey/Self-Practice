@@ -1,7 +1,7 @@
-package PatternsPractice.ObserverPattern;
+package PatternsPractice.ObserverPattern.ObservedValue;
 
 public class ByTenChangedObserver extends Observer {
-
+    //Observer which get news about changed value, only if changed value becomes greater or less much than 10
     public String getMarkerOfChannel() {
         return markerOfChannel;
     }

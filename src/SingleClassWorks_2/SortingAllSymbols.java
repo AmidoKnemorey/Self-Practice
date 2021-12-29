@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class SortingAllSymbols {
-    // this program counts amount of spaces and symbols of entered text.
+    // this program counts persent of spaces and symbols of entered text.
     public static void main(String[] args) {
 
         Scanner oneScanner = new Scanner(System.in);
