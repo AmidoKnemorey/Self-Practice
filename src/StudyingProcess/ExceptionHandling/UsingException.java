@@ -1,11 +1,4 @@
-package StudyingProcess;
-
-import Market.Main;
-import com.sun.jdi.StackFrame;
-
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
+package StudyingProcess.ExceptionHandling;
 
 public class UsingException {
     public static void main(String[] args) {

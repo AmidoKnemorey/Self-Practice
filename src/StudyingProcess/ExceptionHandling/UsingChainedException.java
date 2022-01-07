@@ -1,4 +1,4 @@
-package StudyingProcess;
+package StudyingProcess.ExceptionHandling;
 
 public class UsingChainedException {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package StudyingProcess;
+package StudyingProcess.ExceptionHandling;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -30,5 +30,9 @@ public class TestingHandling {
         } finally {
             System.out.println("This is the end of the try/catch block within finally block.");
         }
-    }
+        /*
+        Multi catch block for instance below:
+        catch (ArithmeticException | IndexOutOfBoundsException |IllegalArgumentException exception)
+         */
+        }
 }

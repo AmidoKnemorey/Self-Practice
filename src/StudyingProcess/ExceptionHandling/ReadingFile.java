@@ -1,10 +1,10 @@
-package StudyingProcess;
+package StudyingProcess.ExceptionHandling;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Scanner;
+import java.util.*;
 
 public class ReadingFile {
     public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class ReadingFile {
 //            BufferedReader bufferedReader = new BufferedReader(new FileReader("C:\\Users\\HP\\Desktop\\Java\\GIT_kopia.txt"));
             BufferedReader bufferedReader = new BufferedReader(new FileReader("yesenin_white_birch.txt"));
             String firstLineOfFile = bufferedReader.readLine();
-            System.out.println(firstLineOfFile);
+            System.out.printf("Сергей Есенин. "+firstLineOfFile+".%n%n");
             readingAllTheFile();
         } catch (FileNotFoundException fileNotFoundException) {
             System.out.println("File not found.");
@@ -26,10 +26,23 @@ public class ReadingFile {
         }
     }
     private static void readingAllTheFile () throws IOException, RuntimeException { //unchecked RunTimeException and checked IOException
+        List<String> wholeReadFile = new ArrayList<>();
         FileReader fileReader = new FileReader("yesenin_white_birch.txt");
         Scanner scanner = new Scanner(fileReader);
-        do {
-            System.out.println(scanner.nextLine());
-        } while (scanner.hasNextLine());
+        while (scanner.hasNextLine()) {
+            wholeReadFile.add(scanner.nextLine());
+        }
+        wholeReadFile.stream().forEach(currentLine -> System.out.println(currentLine.toUpperCase(Locale.ROOT)));
+        System.out.println(linesStartedWithConcreteLetter(wholeReadFile));
+    }
+
+    private static List<String> linesStartedWithConcreteLetter (List<String> wholePoem) {
+        //this method was implemented in order just to practice with stream and lambda
+        List<String> processedList= new ArrayList<>();
+        wholePoem.stream()
+                .filter(line -> line.length() == 14)
+                .filter(line -> line.toLowerCase(Locale.ROOT).startsWith("о"))
+                .forEach(processedList::add);
+        return processedList;
     }
 }

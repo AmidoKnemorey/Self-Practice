@@ -16,16 +16,17 @@ public class MainClass {
 //  i did it first time and all this program is one of my first codes in Java.
 //  I'm newbee 31.10.2021. Someday I'll expand this study program if I have no other tasks :P
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
+        try {
+            CalculatingBoy Bobby = new CalculatingBoy(); // Bobby helps us to calculate different average values
 
-        CalculatingBoy Bobby = new CalculatingBoy(); // Bobby helps us to calculate different average values
-
-        List<TheTrip> allTrips = new ArrayList<>();
-        FileReader mainReader = new FileReader("test.txt");
-        Scanner mainScanner = new Scanner(mainReader);
-        while (mainScanner.hasNextLine()) {
-            String temporaryLine = mainScanner.nextLine();
-            allTrips.add(treatmentOfEachLine(temporaryLine)); }
+            List<TheTrip> allTrips = new ArrayList<>();
+            FileReader mainReader = new FileReader("testHandlingException.txt");
+            Scanner mainScanner = new Scanner(mainReader);
+            while (mainScanner.hasNextLine()) {
+                String temporaryLine = mainScanner.nextLine();
+                allTrips.add(treatmentOfEachLine(temporaryLine));
+            }
             mainReader.close();
             mainScanner.close();
 
@@ -33,6 +34,10 @@ public class MainClass {
 
             Bobby.mostOftenUsedBicycle(allTrips);
 
+        } catch (IOException ioException) {
+            System.err.println("Attention user, file not found! Check the path to the file.");
+            System.exit(0);
+        }
     }
     public static TheTrip treatmentOfEachLine (String temporaryLine) {
         String[] temporaryStorage = temporaryLine.split(","); // splitted line from txt into an array

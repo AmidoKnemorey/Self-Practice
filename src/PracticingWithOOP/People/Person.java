@@ -36,7 +36,7 @@ public abstract class Person {
     }
 
     public void testMethodFromPerson(){
-        System.out.println("I'm a test method and I was called from Person abstract class");
+        System.out.println("I'm a testHandlingException method and I was called from Person abstract class");
     }
 
     @Override

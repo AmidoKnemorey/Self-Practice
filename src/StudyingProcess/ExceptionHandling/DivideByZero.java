@@ -1,4 +1,4 @@
-package StudyingProcess;
+package StudyingProcess.ExceptionHandling;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

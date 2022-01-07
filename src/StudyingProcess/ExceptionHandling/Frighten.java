@@ -1,4 +1,4 @@
-package StudyingProcess;
+package StudyingProcess.ExceptionHandling;
 
 import java.io.EOFException;
 import java.io.FileNotFoundException;

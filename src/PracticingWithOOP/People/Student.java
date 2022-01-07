@@ -48,7 +48,7 @@ final class Student extends Person {
     }
 
     public void testMethodFromStudent(){
-        System.out.println("I'm a test method and I was called from Student subclass ");
+        System.out.println("I'm a testHandlingException method and I was called from Student subclass ");
     }
 
     public void suddenlyBecameLazy() {

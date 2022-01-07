@@ -20,7 +20,7 @@ public class Main {
         //Using the upcast I use exactly quintessence of the all OOP ?> overriding
         //using my default constructor and non-strong typing. Also, hope I use some polymorphism, encapsulation and inheritance
         Person student2 = new Student();
-        //student2.testMethodFromPerson(); //I can't call the test method or any other method from the subclass, only from the parent class
+        //student2.testMethodFromPerson(); //I can't call the testHandlingException method or any other method from the subclass, only from the parent class
         System.out.println(student2);// But I can call "toString" method which co works with parent class because o (Hope I'm right)
         System.out.println(student2.getClass().getName());
     }
