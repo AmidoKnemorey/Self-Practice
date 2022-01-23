@@ -1,4 +1,4 @@
-package StudyingProcess.Market;
+package FirstMiniProjects.Market;
 
 import java.time.LocalDate;
 
@@ -12,7 +12,7 @@ public interface Product {
 
     public int getQuantity();
 
-    void increaseQuantity(int amount);
+    void increaseQuantity(int amount, Basket basket);
 
-    void decreaseQuantity(int amount, Basket basket) throws LackOfQuantityException;
+    void decreaseQuantity(int amount, Basket basket) throws NoSuchProductAvailableInBasket;
 }

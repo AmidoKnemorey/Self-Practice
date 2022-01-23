@@ -1,9 +1,9 @@
-package StudyingProcess.Market;
+package FirstMiniProjects.Market;
 
 import java.time.LocalDate;
 
 public class Main {
-    public static void main(String[] args) throws LackOfQuantityException {
+    public static void main(String[] args) throws NoSuchProductAvailableInBasket {
 
         Basket mainBasket = new Basket();
 
@@ -15,20 +15,17 @@ public class Main {
         mainBasket.addProductToBasket(product2);
         mainBasket.addProductToBasket(product3);
 
-        product3.increaseQuantity(4);
+        product3.decreaseQuantity(1, mainBasket);
 
-        product3.decreaseQuantity(2, mainBasket);
+        product3.increaseQuantity(2, mainBasket);
 
         for(Product product : mainBasket.getAllProducts().keySet()) {
             System.out.printf("%nProduct %s, %d pcs. which costs %f, and it's availability: %s.", product.getTitle(), product.getQuantity(),
                     product.getPriceOfProduct(), product.isProductAvailable(LocalDate.of(2022,1,3)));
         }
 
-        OrderService orderService = new OrderService(mainBasket);
+        System.out.println("\n"+mainBasket.getCurrentCapacity());
 
-        System.out.print("\n"+orderService.getTotalPrice());
-
-        System.out.println(mainBasket.getAllProducts());
 
     }
 }

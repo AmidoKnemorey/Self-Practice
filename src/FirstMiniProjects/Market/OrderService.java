@@ -1,7 +1,4 @@
-package StudyingProcess.Market;
-
-import java.util.Map;
-import java.util.stream.Collectors;
+package FirstMiniProjects.Market;
 
 public class OrderService {
 

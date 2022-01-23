@@ -20,15 +20,13 @@ public class StreamPractice {
 
         int[] arrayOfSomeNumbers = {81, 226, 505, 291, 606, 103, 105, 607, 97, 591, 502, 982, 88, 101, 133};
 
-//        System.out.printf("Sum of numbers 1 - 10 is: %d%n", IntStream.rangeClosed(1, 10).sum());
+        sixthExercise(arrayOfSomeNumbers);
 
 //        seventhExercise(allEmployees);
 
-//        Iterator<Employee> iterator = eighthExercise(allEmployees).listIterator();
-//        while (iterator.hasNext())
-//            System.out.println(iterator.next());
+//        for (Employee employee : eighthExercise(allEmployees)) System.out.println(employee);
 
-    ninthExercise(allEmployees);
+//        ninthExercise(allEmployees);
     }
 
 
@@ -71,14 +69,13 @@ public class StreamPractice {
 
     private static void ninthExercise (List<Employee> allEmployees) {
         double maxSalary = allEmployees.stream()
-                .filter(Objects::nonNull)
-                .map(Employee::getSalary)
-                .max(Comparator.naturalOrder())
-                .orElseThrow(NullPointerException::new);
+                        .filter(Objects::nonNull)
+                        .map(Employee::getSalary)
+                        .max(Comparator.naturalOrder())
+                        .orElseThrow(NullPointerException::new);
 
         System.out.println(maxSalary);
     }
-
 }
 
 

@@ -1,4 +1,4 @@
-package StudyingProcess.Market;
+package FirstMiniProjects.Market;
 
 import java.time.LocalDate;
 import java.util.function.Function;
@@ -17,19 +17,26 @@ public class GenericProduct implements Product {
         this.title = title;
     }
 
-
     @Override
-    public void increaseQuantity(int amountToIncrease) {
-        this.quantity += amountToIncrease;
+    public void increaseQuantity(int amountToIncrease, Basket basket) {
+        if (!basket.isProductInBasket(this)) {
+            basket.addProductToBasket(this);
+            this.quantity += amountToIncrease;
+        }
+        basket.currentCapacity += amountToIncrease;
     }
 
     @Override
-    public void decreaseQuantity(int amountToDecrease, Basket basket) throws LackOfQuantityException {
+    public void decreaseQuantity(int amountToDecrease, Basket basket) throws NoSuchProductAvailableInBasket {
         if (this.quantity > amountToDecrease) {
             this.quantity -= amountToDecrease;
+            basket.currentCapacity -= amountToDecrease;
         } else if (this.quantity == amountToDecrease) {
             basket.removeProduct(this);
-        } else { throw new LackOfQuantityException(); }
+            basket.currentCapacity -= amountToDecrease;
+        } else {
+            System.out.printf("\nThere is only %d pcs of %s.\n", this.quantity, this.title);
+        }
     }
 
     public int getQuantity() {
@@ -49,5 +56,11 @@ public class GenericProduct implements Product {
     @Override
     public double getPriceOfProduct() {
         return this.priceSupplier.get();
+    }
+
+    @Override
+    public String toString() {
+        return  String.format("\nProduct %s, %d pcs. which costs %f, and it's availability: %s.", getTitle(), getQuantity(),
+                getPriceOfProduct(), isProductAvailable(LocalDate.of(2022,1,3)));
     }
 }

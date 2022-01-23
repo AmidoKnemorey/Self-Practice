@@ -5,8 +5,8 @@ import java.util.List;
 
 public enum SingletonServer {
 
-    //public static SingletonServer instance = new SingletonServer();
-
+//    public static SingletonServer instance = new SingletonServer();
+//
 //    public static SingletonServer getInstance() {
 //        if (instance == null) {
 //            synchronized (SingletonServer.class) {

@@ -3,8 +3,9 @@ package PatternsPractice.DaoPattern;
 public class User {
     private String name;
     private String email;
+    private int id;
 
-    public User(String name, String email) {
+    public User(String name, String email, int id) {
         this.name = name;
         this.email = email;
     }
